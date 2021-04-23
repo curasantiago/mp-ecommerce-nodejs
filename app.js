@@ -28,7 +28,7 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/payment', (req, res) => {
-  console.log(req.body);
+  
   res.status(200).end();
 })
 
@@ -106,7 +106,7 @@ app.post('/checkout', (req, res) => {
       // Este valor reemplazará el string "<%= global.id %>" en tu HTML
         global.id = response.body.id;
        
-        console.log(preference)
+        
         res.redirect(response.body.init_point);
 
 
