@@ -1,4 +1,6 @@
-
+<head>
+    <script src="https://www.mercadopago.com/v2/security.js" view="detail"></script>
+</head>
 <div class="as-search-wrapper" role="main">
     <div class="as-navtuck-wrapper">
         <div class="as-l-fullwidth  as-navtuck" data-events="event52">
@@ -84,7 +86,12 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <form action="/checkout" method="POST">
+                                <input type="hidden" name="title" value={{title}}>
+                                <input type="hidden" name="img" value={{img}}>
+                                <input type="hidden" name="price" value={{price}}>
+                                <button type="submit" class="mercadopago-button" formmethod="post">Pagar la compra</button>
+                            </form>
                         </div>
                     </div>
                 </div>
