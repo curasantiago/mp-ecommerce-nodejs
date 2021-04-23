@@ -91,9 +91,9 @@ app.post('/checkout', (req, res) => {
           installments: 6
         },
         back_urls: {
-          success: "http://santiagocura-mp-ecommerce-node/success",
-          failure: "http://santiagocura-mp-ecommerce-node/failure",
-          pending: "http://santiagocura-mp-ecommerce-node/pending"
+          success: "https://santiagocura-mp-ecommerce-node/success",
+          failure: "https://santiagocura-mp-ecommerce-node/failure",
+          pending: "https://santiagocura-mp-ecommerce-node/pending"
       },
       auto_return: "approved",
 
