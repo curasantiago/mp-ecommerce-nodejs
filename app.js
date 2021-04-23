@@ -28,7 +28,8 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/payment', (req, res) => {
-  
+  console.log('Payment: ->')
+  console.log(req.body);
   res.status(200).end();
 })
 
