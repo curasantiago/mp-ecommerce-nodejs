@@ -91,13 +91,13 @@ app.post('/checkout', (req, res) => {
           installments: 6
         },
         back_urls: {
-          success: "https://santiagocura-mp-ecommerce-node/success",
-          failure: "https://santiagocura-mp-ecommerce-node/failure",
-          pending: "https://santiagocura-mp-ecommerce-node/pending"
+          success: "https://santiagocura-mp-ecommerce-node.herokuapp.com/success",
+          failure: "https://santiagocura-mp-ecommerce-node.herokuapp.com/failure",
+          pending: "https://santiagocura-mp-ecommerce-node.herokuapp.com/pending"
       },
       auto_return: "approved",
 
-        notification_url: 'https://santiagocura-mp-ecommerce-node/payment',
+        notification_url: 'https://santiagocura-mp-ecommerce-node.herokuapp.com/payment',
         external_reference: 'curasantiago@gmail.com',
         };
      
