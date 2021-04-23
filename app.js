@@ -97,7 +97,7 @@ app.post('/checkout', (req, res) => {
       },
       auto_return: "approved",
 
-        notification_url: '/payment',
+        notification_url: 'https://santiagocura-mp-ecommerce-node/payment',
         external_reference: 'curasantiago@gmail.com',
         };
      
