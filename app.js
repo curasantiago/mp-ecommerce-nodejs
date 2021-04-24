@@ -59,21 +59,22 @@ app.post('/checkout', (req, res) => {
           ID: 1234,
           title: req.body.title,
           description: "Dispositivo Móvil de Tienda e-commerce",
-          image: __dirname + req.body.img,
+          picture_url: __dirname + req.body.img,
           quantity: 1,
           unit_price: Number(req.body.price),
           external_reference: "curasantiago@gmail.com"
         }
       ],
         payer: {
-          first_name: "Lalo",
-          last_name: "Landa",
+          name: "Lalo",
+          surname: "Landa",
+          email: "test_user_63274575@testuser.com",
           phone: {
             area_code: "11",
             number: 22223333
           },
           address: {
-            street_name: "false",
+            street_name: "False",
             street_number: 123,
             zip_code: "1111"
           },
