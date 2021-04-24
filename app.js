@@ -113,7 +113,7 @@ app.post('/checkout', (req, res) => {
       .then(function(response){
       // Este valor reemplazará el string "<%= global.id %>" en tu HTML
         global.id = response.body.id;
-        console.log(preference)
+        
         
         res.redirect(response.body.init_point);
 
