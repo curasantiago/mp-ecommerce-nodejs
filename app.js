@@ -22,7 +22,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/detail', function (req, res) {
-    
+ 
     res.render('detail', req.query);
     
 });
@@ -49,7 +49,13 @@ app.get('/failure', (req, res) => {
 })
 
 app.post('/checkout', (req, res) => {
-  
+
+  let img = req.body.img;
+  let picture = ''
+  for ( let i=1; i<img.length; i++) {
+    picture = picture + img[i];
+  }
+    
     let preference = {
         headers: {
           "x-integrator-id": "dev_24c65fb163bf11ea96500242ac130004" 
@@ -59,7 +65,7 @@ app.post('/checkout', (req, res) => {
           ID: 1234,
           title: req.body.title,
           description: "Dispositivo Móvil de Tienda e-commerce",
-          picture_url: req.body.img,
+          picture_url: "https://santiagocura-mp-ecommerce-node.herokuapp.com" + picture,
           quantity: 1,
           unit_price: Number(req.body.price),
           external_reference: "curasantiago@gmail.com"
@@ -107,7 +113,7 @@ app.post('/checkout', (req, res) => {
       .then(function(response){
       // Este valor reemplazará el string "<%= global.id %>" en tu HTML
         global.id = response.body.id;
-       
+        console.log(preference)
         
         res.redirect(response.body.init_point);
 
