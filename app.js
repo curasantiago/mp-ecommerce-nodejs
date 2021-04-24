@@ -59,7 +59,7 @@ app.post('/checkout', (req, res) => {
           ID: 1234,
           title: req.body.title,
           description: "Dispositivo Móvil de Tienda e-commerce",
-          picture_url: __dirname + req.body.img,
+          picture_url: req.body.img,
           quantity: 1,
           unit_price: Number(req.body.price),
           external_reference: "curasantiago@gmail.com"
